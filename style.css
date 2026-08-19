@@ -1,0 +1,61 @@
+/* Simple layout and styling for Pong */
+:root{
+  --bg:#0b0b0b;
+  --fg:#fff;
+  --accent:#00d1ff;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+#game{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:24px;
+  gap:12px;
+  min-height:100vh;
+}
+
+canvas{
+  background:#000;
+  border:4px solid rgba(255,255,255,0.08);
+  box-shadow:0 8px 30px rgba(0,0,0,0.6);
+  display:block;
+}
+
+/* Scoreboard */
+#scoreboard{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:700;
+  font-size:28px;
+  color:var(--fg);
+  letter-spacing:2px;
+}
+
+#scoreboard #playerScore,
+#scoreboard #computerScore{
+  min-width:48px;
+  text-align:center;
+  font-size:36px;
+}
+
+/* Help & instructions */
+#instructions{
+  color:rgba(255,255,255,0.6);
+  font-size:13px;
+  text-align:center;
+  margin-top:4px;
+  user-select:none;
+}
